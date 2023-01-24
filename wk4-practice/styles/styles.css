@@ -1,0 +1,36 @@
+/* selects both navs and footers */
+nav, footer {
+    background-color: steelblue;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+/* selects only p's inside of footers */
+footer p {
+    font-size: 20px;
+    margin: 20px auto;
+}
+/* style of a's only when the mouse hovers over them */
+a:hover {
+    background-color: white;
+    color: steelblue;
+}
+img {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+/* * {
+    border: 2px dashed orangered;
+} */
+h1 {
+    text-align: center;
+}
+main p {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+a {
+    font-size: 1.5em;
+}

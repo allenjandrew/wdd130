@@ -1,0 +1,37 @@
+body {
+    background-color: #ffa2ca;
+    width: 40%;
+    text-align: center;
+    margin: 0 auto;
+}
+.arial {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.white {
+    color: white;
+}
+#title, #second-quote {
+    font-size: 3em;
+}
+#title:hover {
+    color: black;
+}
+#first-quote {
+    margin: 50 auto;
+}
+#first-quote, footer {
+    font-size: 1.4em;
+}
+#gospel-steps {
+    text-align: left;
+}
+img {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+/* * {
+    border: 2px dashed orangered;
+} */
