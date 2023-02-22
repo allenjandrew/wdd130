@@ -84,7 +84,9 @@ nav a:hover {
 #hero-msg {
   grid-area: 1/2/2/3;
   background-color: var(--white);
-  margin-top: 100px;
+  margin-top: 150px;
+  height: 170px;
+  border-radius: 7px;
 }
 #hero-msg h1,
 #hero-msg h4 {
