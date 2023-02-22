@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calendar</title>
+    <style>
+      /* Style for the calendar container */
+      #calendar {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 5px;
+      }
+
+      /* Style for the event elements */
+      .event {
+        background-color: #eee;
+        padding: 5px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Calendar</h1>
+    <form>
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" /><br /><br />
+      <label for="event">Event:</label>
+      <input type="text" id="event" name="event" /><br /><br />
+      <button type="submit">Add Event</button>
+    </form>
+    <div id="calendar"></div>
+    <script>
+      // Get references to the form and calendar elements
+      const form = document.querySelector("form");
+      const calendar = document.querySelector("#calendar");
+
+      // Create an array to store the events
+      const events = [];
+
+      // Function to add a new event to the array and display it on the calendar
+      function addEvent(date, event) {
+        events.push({ date: date, event: event });
+        const eventDiv = document.createElement("div");
+        eventDiv.classList.add("event");
+        eventDiv.textContent = `${date}: ${event}`;
+        calendar.appendChild(eventDiv);
+      }
+
+      // Add an event listener to the form submission
+      form.addEventListener("submit", (event) => {
+        event.preventDefault(); // prevent form from submitting and refreshing the page
+        const date = form.date.value;
+        const eventText = form.event.value;
+        addEvent(date, eventText);
+        form.reset(); // clear the form inputs
+      });
+    </script>
+  </body>
+</html>
