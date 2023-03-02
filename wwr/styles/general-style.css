@@ -42,7 +42,7 @@ h2 {
   font-family: var(--heading-font);
   color: var(--accent1-color);
 }
-img {
+.rivers-img {
   width: 50%;
 }
 p {

@@ -4,43 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/general-style.css" />
-    <style>
-      .collapsible {
-        background-color: #777;
-        color: white;
-        cursor: pointer;
-        padding: 18px;
-        width: 100%;
-        border: none;
-        text-align: left;
-        outline: none;
-        font-size: 15px;
-      }
-
-      .active,
-      .collapsible:hover {
-        background-color: #555;
-      }
-
-      .content {
-        padding: 0 18px;
-        display: none;
-        overflow: hidden;
-        background-color: #f1f1f1;
-      }
-    </style>
+    <link rel="stylesheet" href="styles/styles.css" />
     <title>FAQ</title>
   </head>
   <body>
-    <div id="content">
-      <h1>Title</h1>
+    <header>
+      <a href="index.html" id="logo_link"
+        ><img class="logo" src="images/logo_main.png" alt="River's End logo"
+      /></a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="rivers.html">Rivers</a>
+        <a href="faq.html">FAQ</a>
+        <a href="site-plan-rafting.html">Site Plan</a>
+        <a href="contact-us.html">Contact Us</a>
+      </nav>
+    </header>
+    <div class="general-content">
+      <h1>River Rafting FAQ's</h1>
       <button type="button" class="collapsible">
         <h2>
           Is this a good trip for kids? What are the age ranges you allow?
         </h2>
       </button>
-      <div class="content">
+      <div class="panel">
         <p>
           Absolutely this is a good trip for children of all ages. We have found
           however that children over the age of 8 seem to enjoy it more overall
@@ -62,7 +49,7 @@
           come?
         </h2>
       </button>
-      <div class="content">
+      <div class="panel">
         <p>
           As with all adventure sports, there is an inherent and assumed element
           of risk. To help ensure your safety, our guides are all certified in
@@ -82,7 +69,7 @@
       <button type="button" class="collapsible">
         <h2>What is included in the trip?</h2>
       </button>
-      <div class="content">
+      <div class="panel">
         <p>
           We will provide all necessary camping equipment. This includes a
           sleeping bag, foam pad, waterproof duffle bag, small waterproof day
@@ -97,7 +84,7 @@
       <button type="button" class="collapsible">
         <h2>What do I need to bring?</h2>
       </button>
-      <div class="content">
+      <div class="panel">
         <p>
           The most effective way to plan for temperature and weather changes in
           the Canyon is to be prepared for both hot & dry and cold & wet Rain
@@ -130,7 +117,7 @@
       <button type="button" class="collapsible">
         <h2>What is so great about whitewater rafting anyway?</h2>
       </button>
-      <div class="content">
+      <div class="panel">
         <p>
           Are you kidding me! What's not great about whitewater rafting!...Let's
           describe a common day on the river.
@@ -154,7 +141,7 @@
       <button type="button" class="collapsible">
         <h2>How far in advance should I book my trip?</h2>
       </button>
-      <div class="content">
+      <div class="panel">
         <p>
           If you have specific dates you need, we recommend booking a year in
           advance. If you can be more flexible 6 months in advance is usually
@@ -169,11 +156,16 @@
       for (i = 0; i < coll.length; i++) {
         coll[i].addEventListener("click", function () {
           this.classList.toggle("active");
-          var content = this.nextElementSibling;
-          if (content.style.display === "block") {
-            content.style.display = "none";
+          var panel = this.nextElementSibling;
+          // if (panel.style.display === "block") {
+          //   panel.style.display = "none";
+          // } else {
+          //   panel.style.display = "block";
+          // }
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
           } else {
-            content.style.display = "block";
+            panel.style.maxHeight = panel.scrollHeight + "px";
           }
         });
       }
