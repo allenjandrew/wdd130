@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" id="logo_link"
+        ><img class="logo" src="images/logo_main.png" alt="River's End logo"
+      /></a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="rivers.html">Rivers</a>
+        <a href="faq.html">FAQ</a>
+        <a href="site-plan-rafting.html">Site Plan</a>
+        <a href="contact-us.html">Contact Us</a>
+      </nav>
+    </header>
+    <main id="contact-content">
+      <h1>We'd love to hear from you!</h1>
+      <div id="feedback"></div>
+      <form action="/my-handling-form-page" method="post">
+        <ul id="contact-ul">
+          <li>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="user_name" />
+          </li>
+          <li>
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" name="user_email" />
+          </li>
+          <li>
+            <label for="msg">Message:</label>
+            <textarea id="msg" name="user_message"></textarea>
+          </li>
+          <li class="button">
+            <button type="submit">Send your message</button>
+            <button type="reset">Reset form</button>
+          </li>
+        </ul>
+      </form>
+    </main>
+    <footer>
+      <a href="#" id="logo_footer"
+        ><img class="logo" src="images/logo_main.png" alt="River's End logo"
+      /></a>
+      <p>River's End &copy;2023 - Andrew Allen</p>
+      <p><a href="site-plan-rafting.html">Site Plan</a></p>
+      <p><a href="contactus.html">Contact Us</a></p>
+      <div class="social">
+        <a href="https://facebook.com/allenjandrew" target="_blank">
+          <img src="images/facebook.png" alt="facebook icon" />
+        </a>
+        <a href="https://twitter.com/andy_allen_2" target="_blank">
+          <img src="images/twitter.png" alt="twitter icon" />
+        </a>
+        <a href="https://instagram.com/allenjandrew" target="_blank">
+          <img src="images/instagram.png" alt="instagram icon" />
+        </a>
+      </div>
+    </footer>
+    <script>
+      // get the feedback div element so we can do something with it.
+      const feedbackElement = document.getElementById("feedback");
+      // get the form so we can read what was entered in it.
+      const formElement = document.forms[0];
+      // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+      formElement.addEventListener("submit", function (e) {
+        // stop the form from doing the default action.
+        e.preventDefault();
+        // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+        feedbackElement.innerHTML =
+          "Hello " +
+          formElement.user_name.value +
+          "! Thank you for your message. We will get back with you as soon as possible!";
+        // make the feedback element visible.
+        feedbackElement.style.display = "block";
+        // add a class to move everything down so our message doesn't cover it.
+        document.body.classList.add("moveDown");
+        // set a timeout to put everything back how it was after 5 seconds.
+        setTimeout(() => {
+          feedbackElement.style.display = "none";
+          document.body.classList.remove("moveDown");
+        }, 5000);
+      });
+    </script>
+  </body>
+</html>
