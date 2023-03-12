@@ -17,21 +17,34 @@
       </nav>
     </header>
     <main>
-      <div id="hero-div">
-        <img id="hero-img" src="" alt="hero image" />
-      </div>
-      <div id="widgets-grid">
-        <div class="widget">
-          <h2>Favorites</h2>
-          <div class="results">Favorites</div>
+      <h1>Recipe Search</h1>
+      <div id="search-element">
+        <div id="search-bar">
+          <form action="/my-handling-form-page" method="post">
+            <input type="search" name="search-input" id="search-input" />
+            <button type="submit">Search</button>
+            <p>Filter by:</p>
+            <label for="tags">Tags:</label>
+            <select name="tags" id="tags">
+              <option value="tag1">tag1</option>
+              <option value="tag2">tag2</option>
+            </select>
+            <label for="prep-time">Prep Time: ≤</label>
+            <select name="prep-time" id="prep-time">
+              <option value="tag1">5 mins</option>
+              <option value="tag2">15 mins</option>
+              <option value="tag1">30 mins</option>
+              <option value="tag2">1 hr</option>
+            </select>
+          </form>
         </div>
-        <div class="widget">
-          <h2>Recently Uploaded</h2>
-          <div class="results">Recently Uploaded</div>
-        </div>
-        <div class="widget">
-          <h2>Recently Viewed</h2>
-          <div class="results">Recently Viewed</div>
+        <div id="search-results">
+          <div class="search-result">
+            <img src="" alt="thumbnail" />
+            <p>Name</p>
+            <p>Tags: tag1, tag2, ...</p>
+            <p>Prep Time: int</p>
+          </div>
         </div>
       </div>
     </main>

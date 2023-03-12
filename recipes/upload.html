@@ -17,23 +17,34 @@
       </nav>
     </header>
     <main>
-      <div id="hero-div">
-        <img id="hero-img" src="" alt="hero image" />
-      </div>
-      <div id="widgets-grid">
-        <div class="widget">
-          <h2>Favorites</h2>
-          <div class="results">Favorites</div>
-        </div>
-        <div class="widget">
-          <h2>Recently Uploaded</h2>
-          <div class="results">Recently Uploaded</div>
-        </div>
-        <div class="widget">
-          <h2>Recently Viewed</h2>
-          <div class="results">Recently Viewed</div>
-        </div>
-      </div>
+      <h1>Upload Your Recipe</h1>
+      <form action="/my-handling-form-page" method="post">
+        <ul id="upload-ul">
+          <li>
+            <label for="recipe-name">Name:</label>
+            <input type="text" name="recipe-name" id="recipe-name" />
+          </li>
+          <li>
+            <label for="ingredients">Ingredients:</label>
+            <input type="text" name="ingredients" id="ingredients" />
+          </li>
+          <li>
+            <label for="directions">Directions:</label>
+            <input type="text" name="directions" id="directions" />
+          </li>
+          <li>
+            <label for="recipe-notes">Notes:</label>
+            <input type="text" name="recipe-notes" id="recipe-notes" />
+          </li>
+          <li>
+            <label for="recipe-src">Source:</label>
+            <input type="text" name="recipe-src" id="recipe-src" />
+          </li>
+          <li>
+            <button type="submit">Upload</button>
+          </li>
+        </ul>
+      </form>
     </main>
     <footer>
       <img class="logo" src="images/logo.png" alt="logo" />
