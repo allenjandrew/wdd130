@@ -2,6 +2,7 @@
   "recipes": [
     {
       "name": "Green Fluff Coolwhip Salad",
+      "id": 0,
       "isFavorite": true,
       "tags": ["Dessert", "Salad"],
       "difficulty": "easy",
@@ -35,6 +36,7 @@
     },
     {
       "name": "Chiapanecan Pozol de Cacao",
+      "id": 1,
       "isFavorite": true,
       "tags": ["Beverage", "Mexican"],
       "difficulty": "easy",
