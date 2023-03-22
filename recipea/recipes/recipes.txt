@@ -1,37 +1,3 @@
-Why will people come to your site?
-    Collection of favorite family recipes that everyone will enjoy
-    Clear and easy-to-follow instructions
-    Attractive and easily navigable website
-What questions will your visitors expect your site to answer for them?
-    How do I make this delicious food?
-    What activities and occasions is this food appropriate for?
-What types of activities will visitors want to complete on your site?
-    Adjust the quantity of servings to make
-    Upload recipes
-    Search for recipes, by:
-        Name
-        Tags
-        Preparation time
-    Share recipes
-    Comment
-What information is necessary to complete any actions your site offers?
-    User search criteria input
-Why will your visitors come to your site instead of another to get this information or complete the actions?
-    Better organization and search capability
-    Easier to understand and follow instructions
-    No ads
-
-
-MAIN PAGE CONTENT
-    Welcome to the recipe site!
-    Here you will find a number of my family's favorite recipes. I wanted to share these because they are just so delicious!! As you make each recipe, feel free to make it your own and enjoy!
-    Have your own favorite recipes you'd like to share so that the whole world can enjoy the best food ever? Fill out this form/ send me an email and I'll get your recipe up!
-
-SECOND PAGE: Recipe Search
-
-THIRD PAGE: Upload Your Recipe
-    Text entry boxes for name, prep time/cook time, ingredients, quantities, directions, source, genre tags
-
 ############
 
 Blueberry Cream Pie

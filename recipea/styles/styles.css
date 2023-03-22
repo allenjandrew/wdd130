@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+
+:root {
+  --primary-color: #bccf64;
+  --secondary-color: #a07b8a;
+  --accent1-color: #10654e;
+  --accent2-color: #86ab4e;
+  --white: #faf0e6;
+  --black: #050f0c;
+
+  --logo-font: Shrikhand;
+  --heading-font: "IM Fell French Canon SC", serif;
+  --paragraph-font: Lato, Helvetica, sans-serif;
+
+  --headline-color-on-white: var(--accent1-color);
+  --headline-color-on-color: var(--white);
+  --paragraph-color-on-white: var(--black);
+  --paragraph-color-on-color: var(--white);
+  --paragraph-background-color: var(--accent1-color);
+  --nav-link-color: var(--accent1-color);
+  --nav-background-color: var(--secondary-color);
+  --nav-hover-link-color: var(--white);
+  --nav-hover-background-color: var(--accent1-color);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--white);
+  font-family: var(--paragraph-font);
+  font-size: 22px;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--heading-font);
+}
+header {
+  background-color: var(--primary-color);
+  display: grid;
+  grid-template-columns: 150px auto;
+  position: fixed;
+  width: 100%;
+}
+.logo {
+  width: 100px;
+}
+#logo-link {
+  padding-top: 5px;
+  justify-self: center;
+  align-self: center;
+}
+nav {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  /* justify-content: space-around; */
+}
+a {
+  color: var(--black);
+}
+nav a {
+  text-align: center;
+  background-color: var(--accent1-color);
+  color: var(--white);
+  text-decoration: none;
+  padding: 20px;
+  margin: 15px;
+  /* height: 50%; */
+  border-radius: 10px;
+}
+nav a:hover {
+  background-color: var(--secondary-color);
+  color: var(--black);
+  /* opacity: 0.7; */
+}
+main {
+  padding-top: 110px;
+}
+#hero-div {
+  height: 500px;
+}
+#hero-div img {
+  width: 100%;
+  margin: -200px auto;
+  position: fixed;
+  z-index: -1;
+}
+#widgets-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 50px;
+}
+.widget {
+  background-color: var(--primary-color);
+  margin: 50px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 3px solid var(--black);
+  height: auto;
+}
+footer {
+  background-color: var(--accent2-color);
+  /* display: grid;
+  grid-template-columns: 150px auto; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+footer nav {
+  align-items: center;
+  margin: auto 50px;
+}
+footer h3 {
+  display: inline;
+  margin: auto 50px;
+}
+#social-links {
+  display: flex;
+  align-items: center;
+  margin: auto 50px;
+}
+#social-links a {
+  margin: auto 10px;
+}
+#social-links img {
+  width: 50px;
+}
+/* * {
+  border: 2px dashed orangered;
+} */

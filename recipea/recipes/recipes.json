@@ -1,0 +1,74 @@
+{
+  "recipes": [
+    {
+      "name": "Green Fluff Coolwhip Salad",
+      "isFavorite": true,
+      "tags": ["Dessert", "Salad"],
+      "difficulty": "easy",
+      "prepTime": 5,
+      "cookTime": 0,
+      "source": "Sally Baird (Nov 2015)",
+      "ingredients": [
+        {
+          "quantity": 16,
+          "measurement": "oz",
+          "ingredient": "cool whip"
+        },
+        {
+          "quantity": 20,
+          "measurement": "oz",
+          "ingredient": "crushed pineapple"
+        },
+        {
+          "quantity": 1,
+          "measurement": "box",
+          "ingredient": "small pistachio pudding"
+        },
+        {
+          "quantity": 3,
+          "measurement": "cup",
+          "ingredient": "mini marshmallows"
+        }
+      ],
+      "directions": ["Mix all together.", "Refrigerate until ready to serve."],
+      "notes": ["Sally made 4x for Thanksgiving 2015"]
+    },
+    {
+      "name": "Chiapanecan Pozol de Cacao",
+      "isFavorite": true,
+      "tags": ["Beverage", "Mexican"],
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 0,
+      "source": "Mix of internet recipes + personal experience",
+      "ingredients": [
+        {
+          "quantity": 1,
+          "measurement": "part",
+          "ingredient": "100% cacao"
+        },
+        {
+          "quantity": 3,
+          "measurement": "part",
+          "ingredient": "nixtamalized corn masa (Maseca Nixtamasa)"
+        },
+        {
+          "quantity": null,
+          "measurement": null,
+          "ingredient": "sugar to taste"
+        },
+        {
+          "quantity": null,
+          "measurement": null,
+          "ingredient": "water"
+        }
+      ],
+      "directions": [
+        "Mix all ingredients together in a large bowl until no longer clumpy.",
+        "Refrigerate.",
+        "Mix well each time it is served."
+      ],
+      "notes": [null]
+    }
+  ]
+}
