@@ -24,7 +24,10 @@ function loadRecipesJSON() {
     console.log(myObj);
     fillFaveWidget(myObj);
   };
-  xhttp.open("GET", "/recipea/recipes/recipes.json");
+  xhttp.open(
+    "GET",
+    "https://allenjandrew.github.io/wdd130/recipea/recipes/recipes.json"
+  );
   xhttp.send();
 }
 
