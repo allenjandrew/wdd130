@@ -1,6 +1,6 @@
 {
-  "recipes": [
-    {
+  "recipes": {
+    "0": {
       "name": "Green Fluff Coolwhip Salad",
       "id": 0,
       "isFavorite": true,
@@ -32,9 +32,12 @@
         }
       ],
       "directions": ["Mix all together.", "Refrigerate until ready to serve."],
-      "notes": ["Sally made 4x for Thanksgiving 2015"]
+      "notes": [
+        "Sally made 4x for Thanksgiving 2015",
+        "Also known as Watergate Salad"
+      ]
     },
-    {
+    "1": {
       "name": "Chiapanecan Pozol de Cacao",
       "id": 1,
       "isFavorite": true,
@@ -72,5 +75,5 @@
       ],
       "notes": [null]
     }
-  ]
+  }
 }
