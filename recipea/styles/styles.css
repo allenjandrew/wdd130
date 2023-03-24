@@ -44,6 +44,7 @@ header {
   grid-template-columns: 150px auto;
   position: fixed;
   width: 100%;
+  z-index: 2;
 }
 .logo {
   width: 100px;
@@ -58,10 +59,10 @@ nav {
   align-items: center;
   text-align: center;
   overflow: hidden;
-  /* justify-content: space-around; */
 }
 a {
   color: var(--black);
+  transition: color 0.1s, background-color 0.1s;
 }
 nav a {
   text-align: center;
@@ -174,55 +175,50 @@ footer h3 {
 }
 
 /* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
+#myModal {
+  /* display: block; Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
+  left: 50%;
+  top: 100px;
+  width: 0; /* Full width */
+  height: 0; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  transition: 0.5s;
 }
 /* Modal Content (Image) */
-.modal-content {
-  margin: auto;
-  display: block;
+#modal-content {
+  margin: 100px auto;
   width: 80%;
   max-width: 900px;
+  text-align: center;
+  color: var(--white);
 }
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
-#modal-div {
+/* #modal-div {
   margin: auto;
-  display: block;
+  display: none;
   width: 80%;
   max-width: 700px;
-  text-align: center;
-  color: #ccc;
   padding: 10px 0;
   height: 150px;
-}
-/* Add Animation - Zoom in the Modal */
-.modal-content {
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
+} */
 /* The Close Button */
-.close {
+#close {
+  display: none;
   position: absolute;
   top: 15px;
   right: 35px;
-  color: #f1f1f1;
+  color: var(--white);
   font-size: 40px;
   font-weight: bold;
-  transition: 0.3s;
+  transition: 0.1s;
 }
-.close:hover,
-.close:focus {
-  color: #bbb;
+#close:hover,
+#close:focus {
+  color: var(--primary-color);
   text-decoration: none;
   cursor: pointer;
 }
@@ -251,14 +247,6 @@ footer h3 {
   }
   footer {
     margin-top: 25px;
-  }
-}
-@keyframes zoom {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
   }
 }
 @media only screen and (max-width: 700px) {

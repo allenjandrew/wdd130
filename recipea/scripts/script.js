@@ -27,7 +27,7 @@ function usingJSON(link) {
     thumbnails = document.getElementsByClassName("recipe-thumbnail");
     for (item of thumbnails) {
       item.onclick = function () {
-        modal.style.display = "block";
+        showModal();
         let recipe = myObj.recipes[this.dataset.recipeid];
         modalDiv.innerHTML = JSON.stringify(recipe);
       };
@@ -54,23 +54,31 @@ function fillFaveWidget(json) {
   document.querySelector("#fave-results").innerHTML = htmlString;
 }
 
-// Get the modal
 var modal = document.getElementById("myModal");
-// Get the image and insert it inside the modal - use its "alt" text as a caption
 var widgets = document.getElementsByClassName("widget");
-var modalDiv = document.getElementById("modal-div");
+var modalDiv = document.getElementById("modal-content");
+function showModal() {
+  modal.style.height = "calc(100% - 100px)";
+  modal.style.width = "100%";
+  modal.style.left = "0";
+  modal.style.borderRadius = "0";
+  closeButton.style.display = "block";
+}
 // for (item of widgets) {
 //   item.onclick = function () {
 //     modal.style.display = "block";
 //     modalDiv.innerHTML = this.innerHTML;
 //   };
 // }
-// Get the <span> element that closes the modal
-var closeButton = document.getElementsByClassName("close")[0];
-// When the user clicks on <span> (x), close the modal
-closeButton.onclick = function () {
-  modal.style.display = "none";
-};
+
+var closeButton = document.getElementById("close");
+closeButton.addEventListener("click", () => {
+  modal.style.height = "0";
+  modal.style.width = "0";
+  modal.style.left = "50%";
+  modal.style.borderRadius = "10px";
+  closeButton.style.display = "none";
+});
 
 fromLink = "recipes/recipes.json"; // "https://allenjandrew.github.io/wdd130/recipea/recipes/recipes.json";
 window.addEventListener("load", usingJSON(fromLink));
