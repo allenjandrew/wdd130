@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/styles.css" />
+    <script src="scripts/upload-script.js" defer></script>
     <title>Upload Recipes</title>
   </head>
   <body>
@@ -24,24 +25,60 @@
       <form action="/my-handling-form-page" method="post">
         <ul id="upload-ul">
           <li>
-            <label for="recipe-name">Name:</label>
-            <input type="text" name="recipe-name" id="recipe-name" />
+            <label for="upload-name">Name:</label>
+            <input type="text" name="upload-name" id="upload-name" />
           </li>
           <li>
-            <label for="ingredients">Ingredients:</label>
-            <input type="text" name="ingredients" id="ingredients" />
+            <label for="upload-desc">Description:</label>
+            <input type="text" name="upload-desc" id="upload-desc" />
           </li>
           <li>
-            <label for="directions">Directions:</label>
-            <input type="text" name="directions" id="directions" />
+            <label for="upload-tags">Tags:</label>
+            <input type="search" name="upload-tags" id="upload-tags" />
           </li>
           <li>
-            <label for="recipe-notes">Notes:</label>
-            <input type="text" name="recipe-notes" id="recipe-notes" />
+            <label for="upload-diff">Difficulty:</label>
+            <select name="upload-diff" id="upload-diff">
+              <option value="easy" selected>Easy</option>
+              <option value="medium">Medium</option>
+              <option value="difficult">Difficult</option>
+            </select>
           </li>
           <li>
-            <label for="recipe-src">Source:</label>
-            <input type="text" name="recipe-src" id="recipe-src" />
+            <label for="upload-prep">Prep time (minutes):</label>
+            <input type="number" name="upload-prep" id="upload-prep" />
+          </li>
+          <li>
+            <label for="upload-cook">Cook time (minutes):</label>
+            <input type="number" name="upload-cook" id="upload-cook" />
+          </li>
+          <li id="upload-ingredients">
+            <label for="upload-ingq"
+              >Ingredients (quantity, measurement, ingredient):</label
+            >
+            <br />
+            <div data-ingnum="0">
+              <input type="number" name="upload-ingq0" id="upload-ingq0" />
+              <input type="text" name="upload-ingm0" id="upload-ingm0" />
+              <input type="text" name="upload-ingi0" id="upload-ingi0" />
+            </div>
+            <input
+              type="button"
+              onclick="addIngredient()"
+              value="Add ingredient"
+            />
+          </li>
+          <li>
+            <label for="upload-direc">Directions:</label>
+            <input type="text" name="upload-direc" id="upload-direc" />
+          </li>
+          <li>
+            <label for="upload-notes">Notes:</label>
+            <input type="text" name="upload-notes" id="upload-notes" />
+          </li>
+          <li>
+            <label for="upload-src">Source:</label>
+            <input type="text" name="upload-src" id="upload-src" />
           </li>
           <li>
             <button type="submit">Upload</button>

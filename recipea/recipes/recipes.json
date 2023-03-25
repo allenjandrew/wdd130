@@ -2,9 +2,9 @@
   "recipes": {
     "0": {
       "name": "Green Fluff Coolwhip Salad",
-      "id": 0,
+      "description": "This green fluff stuff is my absolute favorite treat!",
       "isFavorite": true,
-      "tags": ["Dessert", "Salad"],
+      "tags": ["dessert", "salad"],
       "difficulty": "easy",
       "prepTime": 5,
       "cookTime": 0,
@@ -39,9 +39,9 @@
     },
     "1": {
       "name": "Chiapanecan Pozol de Cacao",
-      "id": 1,
+      "description": "Pozol is a chocolate and corn drink native to the Mexican states of Chiapas and Tabasco. It can be hard to get used to its unique taste and texture!",
       "isFavorite": true,
-      "tags": ["Beverage", "Mexican"],
+      "tags": ["beverage", "mexican"],
       "difficulty": "easy",
       "prepTime": 10,
       "cookTime": 0,
@@ -73,7 +73,7 @@
         "Refrigerate.",
         "Mix well each time it is served."
       ],
-      "notes": [null]
+      "notes": []
     }
   }
 }

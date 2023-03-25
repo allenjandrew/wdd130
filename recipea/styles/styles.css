@@ -108,6 +108,10 @@ main {
   margin: 10px auto;
   padding: 0 10px;
 }
+.widget-title a {
+  font-family: var(--paragraph-font);
+  font-size: 0.5em;
+}
 .recipe-thumbnail {
   background-color: var(--accent2-color);
   margin: 20px 10px 10px;
@@ -146,6 +150,41 @@ main {
   font-size: 0.6em;
   margin: 0;
 }
+.recipe-stats {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  font-size: 0.8em;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2px 2px;
+  background-color: var(--accent1-color);
+  border-radius: 5px;
+}
+.recipe-stats div {
+  background-color: var(--white);
+  width: calc(100% - 4px);
+  margin: 2px 2px;
+  padding: 0;
+  border-radius: 2px;
+}
+.recipe-stats p {
+  margin: 10px 0;
+  color: var(--black);
+}
+#myModal img {
+  margin: 30px auto;
+}
+label {
+  font-size: 0.8em;
+}
+#select-multiplier {
+  color: var(--black);
+  background-color: var(--white);
+  border: 2px solid var(--accent1-color);
+  border-radius: 2px;
+  font-family: var(--paragraph-font);
+  font-size: 0.7em;
+}
 footer {
   background-color: var(--accent2-color);
   /* display: grid;
@@ -173,6 +212,9 @@ footer h3 {
 #social-links img {
   width: 50px;
 }
+.noscroll {
+  overflow: hidden;
+}
 
 /* The Modal (background) */
 #myModal {
@@ -186,7 +228,7 @@ footer h3 {
   overflow: auto; /* Enable scroll if needed */
   background-color: var(--secondary-color);
   border-radius: 10px;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 /* Modal Content (Image) */
 #modal-content {
@@ -208,8 +250,8 @@ footer h3 {
 /* The Close Button */
 #close {
   display: none;
-  position: absolute;
-  top: 15px;
+  position: fixed;
+  top: 115px;
   right: 35px;
   color: var(--white);
   font-size: 40px;
