@@ -136,7 +136,6 @@ function fillFaveWidget(jsonObject) {
 
 function fillReupWidget(jsonObject) {
   let htmlString = "";
-  let recipesShown = widgetMaxRecipes;
   for (key in jsonObject.recipes) {
     let value = jsonObject.recipes[key];
     console.log(key);

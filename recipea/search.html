@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/styles.css" />
+    <script src="scripts/search-script.js"></script>
     <title>Search Recipes</title>
   </head>
   <body>
@@ -27,20 +28,29 @@
             <div>
               <br />
               <input type="search" name="search-input" id="search-input" />
-              <input type="button" id="search-button" onclick="updateSearch()" value="Search"></button>
+              <input
+                type="button"
+                id="search-button"
+                onclick="updateSearch()"
+                value="Search"
+              />
               <br />
               <p>Filter by:</p>
               <label for="tags">Tags:</label>
-              <select name="tags" id="tags">
-                <option value="tag1">tag1</option>
-                <option value="tag2">tag2</option>
+              <select name="tags" id="tags-filter">
+                <option value="#all#">All</option>
+                <option value="dessert">dessert</option>
+                <option value="salad">salad</option>
+                <option value="beverage">beverage</option>
+                <option value="mexican">mexican</option>
               </select>
               <label for="total-time">Total Time: ≤</label>
-              <select name="total-time" id="total-time">
-                <option value="tag1">5 mins</option>
-                <option value="tag2">15 mins</option>
-                <option value="tag1">30 mins</option>
-                <option value="tag2">1 hr</option>
+              <select name="total-time" id="time-filter">
+                <option value="1000">All</option>
+                <option value="5">5 mins</option>
+                <option value="15">15 mins</option>
+                <option value="30">30 mins</option>
+                <option value="60">1 hr</option>
               </select>
               <br />
             </div>
@@ -51,7 +61,7 @@
             <img src="images/logo/main.png" alt="thumbnail" />
             <p>Recipe Name</p>
             <p>Tags: tag1, tag2, ...</p>
-            <p>Prep Time: int</p>
+            <p>Prep Time: int<br />Cook Time: int</p>
           </div>
         </div>
       </div>
