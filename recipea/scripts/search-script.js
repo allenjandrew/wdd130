@@ -77,3 +77,5 @@ function addToHtmlString(string, group) {
   }
   return string;
 }
+
+window.addEventListener("load", updateSearch());
