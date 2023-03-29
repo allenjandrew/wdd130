@@ -74,8 +74,8 @@ function fillModal(recipeid, jsonObject) {
     recipe.prepTime
   } mins</p></div><div><p>Cook Time: ${
     recipe.cookTime
-  } mins</p></div></div><p>${
-    recipe.description
+  } mins</p></div></div><p>${recipe.description}</p><p>From: ${
+    recipe.source
   }</p><img src="images/recipe/${recipeid}.png" alt="${
     recipe.name
   }" /><br><label for="multiplier">Ingredient multiplier: </label><select id="select-multiplier" name="multiplier"><option value="1" selected>1x</option><option value="1.5">1.5x</option><option value="2">2x</option><option value="3">3x</option><option value="4">4x</option><option value="5">5x</option><option value="6">6x</option></select><h2>Ingredients</h2><ul id="ingredients-list">`;

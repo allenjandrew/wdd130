@@ -26,19 +26,24 @@ def getDataFromUser():
     source = input("Source: ")
 
     ingredients = []
-
     print("INGREDIENTS")
 
     while True:
-        try:
-            quantity = int(input("Quantity (press enter on blank to move on): "))
-        except:
-            break
+        iput = input("Quantity (press enter on blank to move on): ")
 
-        if not quantity:
+        if iput in ["null", "none", "empty", "blank"]:
+            quantity = None
+            measurement = None
+        elif not iput:
             break
+        else:
+            try:
+                quantity = float(iput)
+            except:
+                print("Enter a number or 'null'")
+                continue
 
-        measurement = input("Measurement: ").lower()
+            measurement = input("Measurement: ").lower()
 
         ingredient = input("Ingredient Name: ")
 
@@ -47,13 +52,13 @@ def getDataFromUser():
         )
 
     directions = []
-    word = input("Directions (press enter on blank to move on):\n> ").lower()
+    word = input("Directions (press enter on blank to move on):\n> ")
 
     while True:
         if word == "":
             break
         directions.append(word)
-        word = input("> ").lower()
+        word = input("> ")
 
     notes = []
     word = input("Notes (press enter on blank to move on):\n> ")
@@ -62,7 +67,7 @@ def getDataFromUser():
         if word == "":
             break
         notes.append(word)
-        word = input("> ").lower()
+        word = input("> ")
 
     recipeDict = {
         "name": name,
@@ -81,10 +86,6 @@ def getDataFromUser():
     return recipeDict
 
 
-recipeObject = getDataFromUser()
-
-# print(object)
-
 with open("recipes.json", "r") as f:
     data = json.load(f)
 
@@ -93,10 +94,19 @@ with open("recipes.json", "r") as f:
 # print(len(data))
 # print(len(data["recipes"]))
 
-recipeid = str(len(data["recipes"]))
-data["recipes"][recipeid] = recipeObject
+while True:
+    recipeObject = getDataFromUser()
+
+    # print(object)
+
+    recipeid = str(len(data["recipes"]))
+    data["recipes"][recipeid] = recipeObject
+
+    if input("Add another recipe? y/n: ").lower() != "y":
+        break
 
 print(data)
 
-with open("recipes.json", "w") as f:
-    json.dump(data, f, indent=2)
+if input("Upload recipes? y/n: ").lower() == "y":
+    with open("recipes.json", "w") as f:
+        json.dump(data, f, indent=2)

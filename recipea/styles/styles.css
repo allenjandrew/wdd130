@@ -176,6 +176,7 @@ main {
 }
 #myModal img {
   margin: 30px auto;
+  width: 50%;
 }
 label {
   font-size: 0.8em;
@@ -221,7 +222,7 @@ footer h3 {
 
 /* Search page */
 #search-element {
-  margin: 0 auto;
+  margin: 0 auto 50px;
   width: 80%;
   border: 5px solid var(--black);
   background-color: var(--primary-color);
@@ -237,7 +238,7 @@ footer h3 {
 }
 form div {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(9, 1fr);
   align-items: center;
 }
 form p {
@@ -254,7 +255,7 @@ form label {
   margin: 20px;
   border-radius: 10px;
   display: grid;
-  grid-template-columns: 1fr 3fr 3fr 2fr;
+  grid-template-columns: 1fr 4fr 2fr 2fr;
 }
 .search-result:hover {
   border-color: var(--white);

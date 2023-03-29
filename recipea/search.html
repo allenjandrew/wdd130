@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/styles.css" />
-    <script src="scripts/search-script.js"></script>
+    <script src="scripts/search-script.js" defer></script>
     <title>Search Recipes</title>
   </head>
   <body>
@@ -26,33 +26,34 @@
         <div id="search-bar">
           <form action="/my-handling-form-page" method="post">
             <div>
-              <br />
-              <input type="search" name="search-input" id="search-input" />
+              <!-- <br /> -->
+              <input type="text" name="search-input" id="search-input" />
               <input
                 type="button"
                 id="search-button"
                 onclick="updateSearch()"
                 value="Search"
               />
+              <input type="reset" id="reset-button" />
               <br />
               <p>Filter by:</p>
-              <label for="tags">Tags:</label>
-              <select name="tags" id="tags-filter">
+              <label for="tags-filter">Tags:</label>
+              <select name="tags-filter" id="tags-filter">
                 <option value="#all#">All</option>
                 <option value="dessert">dessert</option>
                 <option value="salad">salad</option>
                 <option value="beverage">beverage</option>
                 <option value="mexican">mexican</option>
               </select>
-              <label for="total-time">Total Time: ≤</label>
-              <select name="total-time" id="time-filter">
+              <label for="time-filter">Total Time: ≤</label>
+              <select name="time-filter" id="time-filter">
                 <option value="1000">All</option>
                 <option value="5">5 mins</option>
                 <option value="15">15 mins</option>
                 <option value="30">30 mins</option>
                 <option value="60">1 hr</option>
               </select>
-              <br />
+              <!-- <br /> -->
             </div>
           </form>
         </div>
@@ -66,6 +67,10 @@
         </div>
       </div>
     </main>
+    <div id="myModal" class="modal">
+      <span id="close">&times;</span>
+      <div id="modal-content"></div>
+    </div>
     <footer>
       <img class="logo" src="images/logo/main.png" alt="logo" />
       <h3>&copy;2023 Andrew Allen</h3>
