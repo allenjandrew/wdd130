@@ -23,41 +23,28 @@
     <main>
       <h1>Upload Your Recipe</h1>
       <form action="/my-handling-form-page" method="post">
-        <ul id="upload-ul">
-          <li>
-            <label for="upload-name">Name:</label>
-            <input type="text" name="upload-name" id="upload-name" />
-          </li>
-          <li>
-            <label for="upload-desc">Description:</label>
-            <input type="text" name="upload-desc" id="upload-desc" />
-          </li>
-          <li>
-            <label for="upload-tags">Tags:</label>
-            <input type="search" name="upload-tags" id="upload-tags" />
-          </li>
-          <li>
-            <label for="upload-diff">Difficulty:</label>
-            <select name="upload-diff" id="upload-diff">
-              <option value="easy" selected>Easy</option>
-              <option value="medium">Medium</option>
-              <option value="difficult">Difficult</option>
-            </select>
-          </li>
-          <li>
-            <label for="upload-prep">Prep time (minutes):</label>
-            <input type="number" name="upload-prep" id="upload-prep" />
-          </li>
-          <li>
-            <label for="upload-cook">Cook time (minutes):</label>
-            <input type="number" name="upload-cook" id="upload-cook" />
-          </li>
-          <li id="upload-ingredients">
-            <label for="upload-ingq"
-              >Ingredients (quantity, measurement, ingredient):</label
-            >
-            <br />
-            <div data-ingnum="0">
+        <div id="upload-grid">
+          <label for="upload-name">Name:</label>
+          <input type="text" name="upload-name" id="upload-name" />
+          <label for="upload-desc">Description:</label>
+          <input type="text" name="upload-desc" id="upload-desc" />
+          <label for="upload-tags">Tags:</label>
+          <input type="search" name="upload-tags" id="upload-tags" />
+          <label for="upload-diff">Difficulty:</label>
+          <select name="upload-diff" id="upload-diff">
+            <option value="easy" selected>Easy</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="professional">Professional</option>
+          </select>
+          <label for="upload-prep">Prep time <em>(minutes)</em>:</label>
+          <input type="number" name="upload-prep" id="upload-prep" />
+          <label for="upload-cook">Cook time <em>(minutes)</em>:</label>
+          <input type="number" name="upload-cook" id="upload-cook" />
+          <label for="upload-ingq"
+            >Ingredients <em>(quantity, measurement, ingredient)</em>:</label
+          >
+          <div id="upload-ingredients">
+            <div class="ing-upl-div" data-ingnum="0">
               <input type="number" name="upload-ingq0" id="upload-ingq0" />
               <input type="text" name="upload-ingm0" id="upload-ingm0" />
               <input type="text" name="upload-ingi0" id="upload-ingi0" />
@@ -67,23 +54,15 @@
               onclick="addIngredient()"
               value="Add ingredient"
             />
-          </li>
-          <li>
-            <label for="upload-direc">Directions:</label>
-            <input type="text" name="upload-direc" id="upload-direc" />
-          </li>
-          <li>
-            <label for="upload-notes">Notes:</label>
-            <input type="text" name="upload-notes" id="upload-notes" />
-          </li>
-          <li>
-            <label for="upload-src">Source:</label>
-            <input type="text" name="upload-src" id="upload-src" />
-          </li>
-          <li>
-            <button type="submit">Upload</button>
-          </li>
-        </ul>
+          </div>
+          <label for="upload-direc">Directions:</label>
+          <input type="text" name="upload-direc" id="upload-direc" />
+          <label for="upload-notes">Notes:</label>
+          <input type="text" name="upload-notes" id="upload-notes" />
+          <label for="upload-src">Source:</label>
+          <input type="text" name="upload-src" id="upload-src" />
+        </div>
+        <button id="upload-button" type="submit">Upload</button>
       </form>
     </main>
     <footer>

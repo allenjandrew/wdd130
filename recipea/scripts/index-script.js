@@ -1,8 +1,8 @@
 function setResults() {
   const faveResults = document.querySelector("#fave-results");
   faveResults.innerHTML = `<div>Result1</div><div>Result2</div><div>Result3</div>`;
-  const reupResults = document.querySelector("#reup-results");
-  reupResults.innerHTML = `<div>Result1</div><div>Result2</div><div>Result3</div>`;
+  const raddResults = document.querySelector("#radd-results");
+  raddResults.innerHTML = `<div>Result1</div><div>Result2</div><div>Result3</div>`;
   const reviResults = document.querySelector("#revi-results");
   reviResults.innerHTML = `<div>Result1</div><div>Result2</div><div>Result3</div>`;
 }
@@ -23,7 +23,7 @@ function usingJSON(link) {
 
     // console.log(myObj);
     fillFaveWidget(myObj);
-    fillReupWidget(myObj);
+    fillRaddWidget(myObj);
 
     // sendJSONData(myObj);
 
@@ -134,7 +134,7 @@ function fillFaveWidget(jsonObject) {
   document.querySelector("#fave-results").innerHTML = htmlString;
 }
 
-function fillReupWidget(jsonObject) {
+function fillRaddWidget(jsonObject) {
   let htmlString = "";
   for (key in jsonObject.recipes) {
     let value = jsonObject.recipes[key];
@@ -151,7 +151,7 @@ function fillReupWidget(jsonObject) {
       }</p><p class="thumbnail-tags">${value.tags.join(", ")}</p></div>`;
     }
   }
-  document.querySelector("#reup-results").innerHTML = htmlString;
+  document.querySelector("#radd-results").innerHTML = htmlString;
 }
 
 var modal = document.getElementById("myModal");

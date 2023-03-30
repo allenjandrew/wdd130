@@ -75,7 +75,7 @@ nav a {
   padding: 20px;
   margin: 15px;
   /* height: 50%; */
-  border-radius: 10px;
+  border-radius: 15px;
 }
 nav a:hover {
   background-color: var(--secondary-color);
@@ -100,12 +100,13 @@ main {
   margin: 50px;
 }
 .widget {
-  background-color: var(--primary-color);
+  background-color: var(--accent2-color);
   margin: 50px;
   padding: 15px;
-  border-radius: 10px;
-  border: 3px solid var(--black);
+  border-radius: 15px;
+  border: 5px solid var(--black);
   height: auto;
+  color: var(--black);
 }
 .widget-title {
   margin: 10px auto;
@@ -116,18 +117,18 @@ main {
   font-size: 0.5em;
 }
 .recipe-thumbnail {
-  background-color: var(--accent2-color);
+  background-color: var(--primary-color);
   margin: 20px 10px 10px;
   padding: 10px;
-  border: 3px solid var(--secondary-color);
-  border-radius: 10px;
+  border: 5px solid var(--secondary-color);
+  border-radius: 15px;
   display: grid;
   grid-template-columns: 1fr 2fr;
   column-gap: 20px;
   cursor: pointer;
 }
 .recipe-thumbnail:hover {
-  border: 3px solid var(--white);
+  border-color: var(--white);
 }
 .thumbnail-name {
   font-size: 0.9em;
@@ -139,8 +140,8 @@ main {
   aspect-ratio: 1/1;
   object-fit: cover;
   grid-row: 2/4;
-  border-radius: 8px;
-  border: 2px solid var(--black);
+  border-radius: 10px;
+  border: 3px solid var(--black);
   overflow: hidden;
 }
 .thumbnail-source {
@@ -225,35 +226,35 @@ footer h3 {
   margin: 0 auto 50px;
   width: 80%;
   border: 5px solid var(--black);
-  background-color: var(--primary-color);
-  border-radius: 10px;
+  background-color: var(--secondary-color);
+  border-radius: 15px;
 }
 #search-bar {
   margin: 0;
   width: 100%;
   border-bottom: 5px solid var(--black);
   background-color: var(--accent2-color);
-  border-radius: 2px;
+  border-radius: 5px;
   padding: 5px 0;
 }
-form div {
+#search-form div {
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: 1fr repeat(9, 2fr) 1fr;
   align-items: center;
 }
-form p {
+#search-form p {
   margin: 0;
   text-align: right;
 }
-form label {
+#search-form label {
   text-align: right;
   padding-right: 5px;
 }
 .search-result {
-  background-color: var(--secondary-color);
-  border: 3px solid var(--accent1-color);
-  margin: 20px;
-  border-radius: 10px;
+  background-color: var(--primary-color);
+  border: 5px solid var(--accent1-color);
+  margin: 30px;
+  border-radius: 15px;
   display: grid;
   grid-template-columns: 1fr 4fr 2fr 2fr;
 }
@@ -266,8 +267,8 @@ form label {
   width: 80%;
   aspect-ratio: 1/1;
   object-fit: cover;
-  border-radius: 8px;
-  border: 2px solid var(--black);
+  border-radius: 10px;
+  border: 3px solid var(--black);
   overflow: hidden;
 }
 .search-result p:nth-of-type(1) {
@@ -281,6 +282,38 @@ form label {
   margin: 20px 0;
 }
 
+/* Upload styles */
+#upload-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  width: 50%;
+  margin: 0 auto;
+  row-gap: 20px;
+  border: 5px solid var(--black);
+  /* background-color: var(--accent2-color); */
+  padding: 30px;
+  border-radius: 15px;
+}
+#upload-grid label {
+  text-align: left;
+}
+#upload-ingredients {
+  width: 100%;
+}
+.ing-upl-div {
+  width: 100%;
+  margin-bottom: 7px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+  gap: 7px;
+}
+#upload-button {
+  display: block;
+  margin: 20px auto 50px;
+  font-size: 1.5em;
+  font-family: var(--paragraph-font);
+}
+
 /* The Modal (background) */
 #myModal {
   /* display: block; Hidden by default */
@@ -292,7 +325,7 @@ form label {
   height: 0; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: var(--secondary-color);
-  border-radius: 10px;
+  border-radius: 15px;
   transition: 0.2s;
 }
 /* Modal Content (Image) */
