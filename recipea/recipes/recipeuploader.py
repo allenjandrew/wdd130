@@ -17,7 +17,13 @@ def getDataFromUser():
         tags.append(word)
         word = input("> ").lower()
 
-    difficulty = input("Difficulty ('easy', 'intermediate', 'professional'): ").lower()
+    while True:
+        difficulty = input(
+            "Difficulty ('easy', 'intermediate', 'professional'): "
+        ).lower()
+        if difficulty in ["easy", "intermediate", "professional"]:
+            break
+        print("Please enter 'easy', 'intermediate', or 'professional'")
 
     prepTime = int(input("Prep Time (minutes): "))
 
