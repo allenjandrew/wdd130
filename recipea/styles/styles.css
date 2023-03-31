@@ -290,22 +290,55 @@ footer h3 {
   margin: 0 auto;
   row-gap: 20px;
   border: 5px solid var(--black);
-  /* background-color: var(--accent2-color); */
+  background-color: var(--accent2-color);
   padding: 30px;
   border-radius: 15px;
 }
 #upload-grid label {
   text-align: left;
+  font-weight: bold;
+}
+.upload-input {
+  width: 100%;
+  /* background-color: var(--secondary-color); */
+}
+.upload-input input {
+  background-color: var(--primary-color);
+  border: 3px solid var(--accent1-color);
+  border-radius: 5px;
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.upload-input input:hover,
+.upload-input input:focus {
+  background-color: var(--white);
+  /* border-color: var(--secondary-color); */
 }
 #upload-ingredients {
   width: 100%;
 }
 .ing-upl-div {
   width: 100%;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
   display: grid;
   grid-template-columns: 1fr 1fr 3fr;
-  gap: 7px;
+  gap: 5px;
+}
+#upload-directions {
+  width: 100%;
+}
+.upload-step {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  margin-bottom: 5px;
+  gap: 5px;
+}
+.upload-step p {
+  font-size: 0.8em;
+  margin: 0;
+  padding: 5px 0;
 }
 #upload-button {
   display: block;
@@ -313,6 +346,9 @@ footer h3 {
   font-size: 1.5em;
   font-family: var(--paragraph-font);
 }
+/* input {
+  background-color: var(--white);
+} */
 
 /* The Modal (background) */
 #myModal {

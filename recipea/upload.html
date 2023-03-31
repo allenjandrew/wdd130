@@ -25,44 +25,70 @@
       <form action="/my-handling-form-page" method="post">
         <div id="upload-grid">
           <label for="upload-name">Name:</label>
-          <input type="text" name="upload-name" id="upload-name" />
+          <div class="upload-input">
+            <input type="text" name="upload-name" id="upload-name" />
+          </div>
           <label for="upload-desc">Description:</label>
-          <input type="text" name="upload-desc" id="upload-desc" />
+          <div class="upload-input">
+            <input type="text" name="upload-desc" id="upload-desc" />
+          </div>
           <label for="upload-tags">Tags:</label>
-          <input type="search" name="upload-tags" id="upload-tags" />
+          <div class="upload-input" id="upload-tags">
+            <div class="upload-tag" data-tagnum="1">
+              <input type="text" name="upload-tag1" id="upload-tag1" />
+            </div>
+            <button type="button" onclick="addTag()">Add Tag</button>
+          </div>
           <label for="upload-diff">Difficulty:</label>
-          <select name="upload-diff" id="upload-diff">
-            <option value="easy" selected>Easy</option>
-            <option value="intermediate">Intermediate</option>
-            <option value="professional">Professional</option>
-          </select>
+          <div class="upload-input">
+            <select name="upload-diff" id="upload-diff">
+              <option value="easy" selected>Easy</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="professional">Professional</option>
+            </select>
+          </div>
           <label for="upload-prep">Prep time <em>(minutes)</em>:</label>
-          <input type="number" name="upload-prep" id="upload-prep" />
+          <div class="upload-input">
+            <input type="number" name="upload-prep" id="upload-prep" />
+          </div>
           <label for="upload-cook">Cook time <em>(minutes)</em>:</label>
-          <input type="number" name="upload-cook" id="upload-cook" />
-          <label for="upload-ingq"
+          <div class="upload-input">
+            <input type="number" name="upload-cook" id="upload-cook" />
+          </div>
+          <label for="upload-ingredients"
             >Ingredients <em>(quantity, measurement, ingredient)</em>:</label
           >
-          <div id="upload-ingredients">
-            <div class="ing-upl-div" data-ingnum="0">
-              <input type="number" name="upload-ingq0" id="upload-ingq0" />
-              <input type="text" name="upload-ingm0" id="upload-ingm0" />
-              <input type="text" name="upload-ingi0" id="upload-ingi0" />
+          <div class="upload-input" id="upload-ingredients">
+            <div class="ing-upl-div" data-ingnum="1">
+              <input type="number" name="upload-ingq1" id="upload-ingq1" />
+              <input type="text" name="upload-ingm1" id="upload-ingm1" />
+              <input type="text" name="upload-ingi1" id="upload-ingi1" />
             </div>
-            <input
-              type="button"
-              onclick="addIngredient()"
-              value="Add ingredient"
-            />
+            <button type="button" onclick="addIngredient()">
+              Add Ingredient
+            </button>
           </div>
           <label for="upload-direc">Directions:</label>
-          <input type="text" name="upload-direc" id="upload-direc" />
+          <div class="upload-input" id="upload-directions">
+            <div class="upload-step" data-direcnum="1">
+              <p>1.&nbsp;</p>
+              <input type="text" name="upload-direc1" id="upload-direc1" />
+            </div>
+            <button type="button" onclick="addDirection()">Add Step</button>
+          </div>
           <label for="upload-notes">Notes:</label>
-          <input type="text" name="upload-notes" id="upload-notes" />
+          <div class="upload-input" id="upload-notes">
+            <div class="upload-note" data-notenum="1">
+              <input type="text" name="upload-note1" id="upload-note1" />
+            </div>
+            <button type="button" onclick="addNote()">Add Note</button>
+          </div>
           <label for="upload-src">Source:</label>
-          <input type="text" name="upload-src" id="upload-src" />
+          <div class="upload-input">
+            <input type="text" name="upload-src" id="upload-src" />
+          </div>
         </div>
-        <button id="upload-button" type="submit">Upload</button>
+        <button id="upload-button" type="submit">Upload Recipe</button>
       </form>
     </main>
     <footer>

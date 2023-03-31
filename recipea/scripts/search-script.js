@@ -20,6 +20,17 @@ function updateSearch() {
   xhttp.send();
 }
 
+// function addFavorite(recipeid) {
+//   const xhttp = new XMLHttpRequest();
+//   xhttp.onload = function () {
+//     var myObj = JSON.parse(this.responseText);
+//     // This is where I can use the JSON object.
+//     myObj.recipes[recipeid].isFavorite = False;
+//   };
+//   xhttp.open("GET", link);
+//   xhttp.send();
+// }
+
 var link = "recipes/recipes.json"; // "https://allenjandrew.github.io/wdd130/recipea/recipes/recipes.json";
 
 function fillSearchResults(jsonObject) {
@@ -61,7 +72,7 @@ function fillSearchResults(jsonObject) {
         break;
     }
   }
-  htmlString = "";
+  htmlString = `<div class="search-divider">Top Results</div>`;
   htmlString = addToHtmlString(htmlString, group3);
   // if (!htmlString) {
   //   htmlString += `<div class="search-divider">More results</div>`;
@@ -93,10 +104,13 @@ function fillModal(recipeid, jsonObject) {
     : recipeid > Object.keys(jsonObject.recipes).length - 5
     ? "Recently Uploaded"
     : "Recipes";
+  let faveButton = recipe.isFavorite
+    ? `onclick="removeFavorite("${recipeid}")" value="Remove Favorite"`
+    : `onclick="addFavorite("${recipeid}")" value="Add Favorite"`;
 
   let htmlString = `<h1>${recipe.name}</h1><p>Tags: ${recipe.tags.join(
     ", "
-  )}</p><div class=recipe-stats><div><p>${funTag}</p></div><div><p>Difficulty: ${
+  )}</p><div class=recipe-stats><div><p>${funTag}</p><input type="button" id="fave-button" ${faveButton} /></div><div><p>Difficulty: ${
     recipe.difficulty
   }</p></div><div><p>Prep Time: ${
     recipe.prepTime

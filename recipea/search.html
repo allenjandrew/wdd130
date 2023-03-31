@@ -38,7 +38,11 @@
               <br />
               <p>Filter by:</p>
               <label for="tags-filter">Tags:</label>
-              <select name="tags-filter" id="tags-filter">
+              <select
+                name="tags-filter"
+                id="tags-filter"
+                onchange="updateSearch()"
+              >
                 <option value="#all#">All</option>
                 <option value="dessert">dessert</option>
                 <option value="salad">salad</option>
@@ -46,7 +50,11 @@
                 <option value="mexican">mexican</option>
               </select>
               <label for="time-filter">Total Time: ≤</label>
-              <select name="time-filter" id="time-filter">
+              <select
+                name="time-filter"
+                id="time-filter"
+                onchange="updateSearch()"
+              >
                 <option value="1000">All</option>
                 <option value="5">5 mins</option>
                 <option value="15">15 mins</option>
