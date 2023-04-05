@@ -283,12 +283,24 @@ footer h3 {
 }
 
 /* Upload styles */
+#picture-div {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin: 40px auto;
+  width: fit-content;
+  gap: 40px;
+}
+#picture-div img {
+  height: 225px;
+  border: 5px solid var(--secondary-color);
+  border-radius: 15px;
+}
 #upload-grid {
   display: grid;
   grid-template-columns: 1fr 3fr;
   width: 50%;
   margin: 0 auto;
-  row-gap: 20px;
+  row-gap: 35px;
   border: 5px solid var(--black);
   background-color: var(--accent2-color);
   padding: 30px;
@@ -332,13 +344,17 @@ footer h3 {
   width: 100%;
   display: grid;
   grid-template-columns: auto 1fr;
-  margin-bottom: 5px;
   gap: 5px;
 }
 .upload-step p {
   font-size: 0.8em;
   margin: 0;
   padding: 5px 0;
+}
+.upload-tag,
+.upload-step,
+.upload-note {
+  margin-bottom: 5px;
 }
 #upload-button {
   display: block;
