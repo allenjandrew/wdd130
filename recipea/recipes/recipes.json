@@ -58,7 +58,7 @@
           "ingredient": "100% cacao"
         },
         {
-          "quantity": 3,
+          "quantity": 4,
           "measurement": "part",
           "ingredient": "nixtamalized corn masa (Maseca Nixtamasa)"
         },
@@ -74,9 +74,10 @@
         }
       ],
       "directions": [
-        "Mix all ingredients together in a large bowl until no longer clumpy.",
+        "Mix cacao and masa together in a large bowl.",
+        "Combine 3/8 cup pozol powder and 1 tsp sugar into 1 cup of water and mix or shake well.",
         "Refrigerate.",
-        "Mix well each time it is served."
+        "Mix well before serving."
       ],
       "notes": []
     },
